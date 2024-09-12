@@ -1,0 +1,236 @@
+// Import new font
+@font-face {
+  font-family: 'leagueSpartan';
+  src: url(/assets/font/League_Spartan/League-Spartan.ttf);
+}
+
+// Set the colors and the font for the application
+$primary-color: rgb(2,2,110);
+$background-color: rgb(245,225,188);
+$counter-color: rgb(236, 229, 229);
+$font-title: 70px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.logoDiv {
+  background-color: $primary-color;
+
+  img {
+    max-width: 8vw;
+  }
+}
+
+h1 {
+  font-family: 'leagueSpartan';
+  font-size: $font-title;
+  text-align: center;
+  margin: 30px;
+}
+
+.counter {
+  width: 50vw;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: fit-content;
+  margin-bottom: 100px;
+  background-color: $counter-color;
+
+  .hidden {
+    display: none;
+  }
+
+  .display {
+    display: flex;
+    margin: 20px;
+  }
+
+  .result {
+    display: block;
+    width: 90%;
+    min-height: 12vh;
+    border-top: 1px solid #00000050;
+    border-left: 1px solid #00000050;
+    border-bottom: 1px solid #00000050;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
+    font-size: 50px;
+    align-content: center;
+    text-align: center;
+
+    overflow-wrap:break-word;
+  }
+
+  .resultSmall {
+    width: 35%;
+    min-height: 12vh;
+    border-top: 1px solid #00000050;
+    border-left: 1px solid #00000050;
+    border-bottom: 1px solid #00000050;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
+    font-size: 50px;
+    align-content: center;
+    text-align: center;
+
+    overflow-wrap: break-word;
+  }
+
+  .restart {
+    display: block;
+    width: 10%;
+    min-height: 12vh;
+    border: 1px solid #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  .restartSmall {
+    width: 10%;
+    min-height: 12vh;
+    border: 1px solid #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  .restart:active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .plusButtons {
+    display: flex;
+    margin: 20px;
+  }
+
+  .plus {
+    width: 100%;
+    height: 10vh;
+    border-radius: 10px;
+    background-color: rgb(2, 109, 2);
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  .plus:active {
+    background-color: rgba(2, 109, 2, .8);
+  }
+
+  .plusSmall {
+    width: 45%;
+    height: 10vh;
+    border-radius: 10px;
+    background-color: rgb(2, 109, 2);
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  .minusButtons {
+    display: flex;
+    margin: 20px;
+  }
+
+  .minus:active {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .minus {
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  .minusSmall {
+    width: 45%;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  .divideCounter {
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  .options {
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  .step {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #00000050;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+  }
+
+  .labelSmall {
+    width: 45%;
+    text-align: center;
+  }
+
+  .stepSmall {
+    width: 45%;
+    height: 5vh;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #00000050;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .show {
+    display: block;
+    margin: 20px;
+  }
+}
+
+footer {
+  height: 10vh;
+  background-color: $primary-color;
+}
+
