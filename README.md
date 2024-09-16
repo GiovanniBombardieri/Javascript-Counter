@@ -11,6 +11,9 @@
     This is my practical project for the course on Javascript of Start2Impact.
     <br />
     <br />
+    <a href="https://javascript-counter-ten.vercel.app">See the application online</a>
+    <br />
+    <br />
     <a href="https://github.com/GiovanniBombardieri/Javascript">View Demo</a>
     ·
     <a href="https://github.com/GiovanniBombardieri/Javascript/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
