@@ -1,20 +1,24 @@
 // IN THIS SCRIPT I CREATE THE FUNCTIONS THAT LET THE COUNTER WORKS. THEN I CALL THEM ON THE RIGHT BUTTONS.
 
 // Functions
+const counterValue = [0]; // Dichiarato array per memorizzare il valore del contatore
 
 // SUM WIDTH FULL COUNTER
 function sum() {
   let control = clickInput.checkValidity()
   console.log(control)
-  const actualNumber = parseInt(result.innerHTML)
+  console.log(counterValue);
+  // const actualNumber = parseInt(result.innerHTML)
   result.style.boxShadow = "0px 0px 5px 5px rgba(0, 0, 255, .2)"
 
   if (control) {
     if (!clickInput.value) {
-      result.innerHTML = actualNumber + 1
-      console.log(result.innerHTML)
+      counterValue.push(counterValue[counterValue.length - 1] + 1)
+      result.innerHTML = counterValue[counterValue.length - 1]
+      console.log(counterValue)
     } else {
-      result.innerHTML = actualNumber + parseInt(clickInput.value)
+      counterValue.push(counterValue[counterValue.length - 1] + parseInt(clickInput.value))
+      result.innerHTML = counterValue[counterValue.length - 1]
       console.log(result.innerHTML)
     }
   } else {
