@@ -1,25 +1,24 @@
 // IN THIS SCRIPT I CREATE THE FUNCTIONS THAT LET THE COUNTER WORKS. THEN I CALL THEM ON THE RIGHT BUTTONS.
 
 // Functions
-const counterValue = [0]; // Dichiarato array per memorizzare il valore del contatore
+const counterValue = [0, 0]; // Dichiarato array per memorizzare il valore del o dei contatore/i
 
 // SUM WIDTH FULL COUNTER
 function sum() {
   let control = clickInput.checkValidity()
   console.log(control)
   console.log(counterValue);
-  // const actualNumber = parseInt(result.innerHTML)
   result.style.boxShadow = "0px 0px 5px 5px rgba(0, 0, 255, .2)"
 
   if (control) {
     if (!clickInput.value) {
-      counterValue.push(counterValue[counterValue.length - 1] + 1)
-      result.innerHTML = counterValue[counterValue.length - 1]
+      counterValue[0] = (counterValue[0] + 1)
+      result.innerHTML = counterValue[0]
       console.log(counterValue)
     } else {
-      counterValue.push(counterValue[counterValue.length - 1] + parseInt(clickInput.value))
-      result.innerHTML = counterValue[counterValue.length - 1]
-      console.log(result.innerHTML)
+      counterValue[0] = (counterValue[0] + parseInt(clickInput.value))
+      result.innerHTML = counterValue[0]
+      console.log(counterValue)
     }
   } else {
     alert('Insert a number')
@@ -30,15 +29,17 @@ function sum() {
 function smallSumLeft() {
   let control = clickInputLeft.checkValidity()
   console.log(control)
-  const actualNumber = parseInt(resultSmallOne.innerHTML)
+  console.log(counterValue);
   resultSmallOne.style.boxShadow = "0px 0px 5px 5px rgba(0, 0, 255, .2)"
   if (control) {
     if (!clickInputLeft.value) {
-      resultSmallOne.innerHTML = actualNumber + 1
-      console.log(resultSmallOne.innerHTML)
+      counterValue[0] = (counterValue[0] + 1)
+      resultSmallOne.innerHTML = counterValue[0]
+      console.log(counterValue)
     } else {
-      resultSmallOne.innerHTML = actualNumber + parseInt(clickInputLeft.value)
-      console.log(resultSmallOne.innerHTML)
+      counterValue[0] = (counterValue[0] + parseInt(clickInputLeft.value))
+      resultSmallOne.innerHTML = counterValue[0]
+      console.log(counterValue)
     }
   } else {
     alert('Insert a number')
@@ -48,15 +49,17 @@ function smallSumLeft() {
 function smallSumRight() {
   let control = clickInputRight.checkValidity()
   console.log(control)
-  const actualNumber = parseInt(resultSmallTwo.innerHTML)
+  console.log(counterValue);
   resultSmallTwo.style.boxShadow = "0px 0px 5px 5px rgba(0, 0, 255, .2)"
   if (control) {
     if (!clickInputRight.value) {
-      resultSmallTwo.innerHTML = actualNumber + 1
-      console.log(resultSmallTwo.innerHTML)
+      counterValue[1] = (counterValue[1] + 1)
+      resultSmallTwo.innerHTML = counterValue[1]
+      console.log(counterValue)
     } else {
-      resultSmallTwo.innerHTML = actualNumber + parseInt(clickInputRight.value)
-      console.log(resultSmallTwo.innerHTML)
+      counterValue[1] = (counterValue[1] + parseInt(clickInputRight.value))
+      resultSmallTwo.innerHTML = counterValue[1]
+      console.log(counterValue)
     }
   } else {
     alert('Insert a number')
@@ -67,16 +70,19 @@ function smallSumRight() {
 function decrease() {
   let control = clickInput.checkValidity()
   console.log(control)
-  const actualNumber = parseInt(result.innerHTML)
+  console.log(counterValue);
   result.style.boxShadow = "0px 0px 5px 5px rgba(0, 0, 255, .2)"
   if (control) {
     if (parseInt(result.innerHTML) > 0 && (parseInt(result.innerHTML) - clickInput.value) >= 0) {
       if (!clickInput.value) {
-        result.innerHTML = actualNumber - 1
-        console.log(result.innerHTML)
+        counterValue[0] = (counterValue[0] - 1)
+        result.innerHTML = counterValue[0]
+        console.log(counterValue)
+
       } else {
-        result.innerHTML = actualNumber - parseInt(clickInput.value)
-        console.log(result.innerHTML)
+        counterValue[0] = (counterValue[0] - parseInt(clickInput.value))
+        result.innerHTML = counterValue[0]
+        console.log(counterValue)
       }
     } else {
       return
@@ -90,16 +96,18 @@ function decrease() {
 function decreaseSmallLeft() {
   let control = clickInputLeft.checkValidity()
   console.log(control)
-  const actualNumber = parseInt(resultSmallOne.innerHTML)
+  console.log(counterValue);
   resultSmallOne.style.boxShadow = "0px 0px 5px 5px rgba(0, 0, 255, .2)"
   if (control) {
     if (parseInt(resultSmallOne.innerHTML) > 0 && (parseInt(resultSmallOne.innerHTML) - clickInputLeft.value) >= 0) {
       if (!clickInputLeft.value) {
-        resultSmallOne.innerHTML = actualNumber - 1
-        console.log(resultSmallOne.innerHTML)
+        counterValue[0] = (counterValue[0] - 1)
+        resultSmallOne.innerHTML = counterValue[0]
+        console.log(counterValue)
       } else {
-        resultSmallOne.innerHTML = actualNumber - parseInt(clickInputLeft.value)
-        console.log(result.innerHTML)
+        counterValue[0] = (counterValue[0] - parseInt(clickInputLeft.value))
+        resultSmallOne.innerHTML = counterValue[0]
+        console.log(counterValue)
       }
     } else {
       return
@@ -112,16 +120,18 @@ function decreaseSmallLeft() {
 function decreaseSmallRight() {
   let control = clickInputRight.checkValidity()
   console.log(control)
-  const actualNumber = parseInt(resultSmallTwo.innerHTML)
+  console.log(counterValue);
   resultSmallTwo.style.boxShadow = "0px 0px 5px 5px rgba(0, 0, 255, .2)"
   if (control) {
     if (parseInt(resultSmallTwo.innerHTML) > 0 && (parseInt(resultSmallTwo.innerHTML) - clickInputRight.value) >= 0) {
       if (!clickInputRight.value) {
-        resultSmallTwo.innerHTML = actualNumber - 1
-        console.log(resultSmallTwo.innerHTML)
+        counterValue[1] = (counterValue[1] - 1)
+        resultSmallTwo.innerHTML = counterValue[1]
+        console.log(counterValue)
       } else {
-        resultSmallTwo.innerHTML = actualNumber - parseInt(clickInputRight.value)
-        console.log(result.innerHTML)
+        counterValue[1] = (counterValue[1] - parseInt(clickInputRight.value))
+        resultSmallTwo.innerHTML = counterValue[1]
+        console.log(counterValue)
       }
     } else {
       return
@@ -133,9 +143,11 @@ function decreaseSmallRight() {
 
 // RESET BUTTON FOR BOTH, FULL AND DIVIDE COUNTER
 function reset() {
+  counterValue[0] = 0;
   result.innerHTML = '0'
   clickInput.value = ''
   result.style.boxShadow = ""
+  console.log(counterValue)
 }
 
 function resetSmallLeft() {
@@ -197,6 +209,12 @@ function splitView() {
 
     divideCounter.innerHTML = 'Less <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16"><path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/></svg>'
 
+    counterValue[0] = 0
+    counterValue[1] = 0
+    resultSmallOne.innerHTML = '0'
+    resultSmallTwo.innerHTML = '0'
+    console.log(counterValue)
+
   } else if (result.classList.contains('hidden') && restart.classList.contains('hidden')) {
     result.classList.replace('hidden', 'result')
     restart.classList.replace('hidden', 'restart')
@@ -222,6 +240,12 @@ function splitView() {
     clickInputRight.classList.add('hidden')
 
     divideCounter.innerHTML = 'More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16"><path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/></svg>'
+
+    counterValue[0] = 0
+    counterValue[1] = 0
+    result.innerHTML = "0"
+    clickInputLeft.value = ''
+    console.log(counterValue)
   }
 
 }
